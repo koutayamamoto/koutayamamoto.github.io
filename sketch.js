@@ -3,28 +3,7 @@
 var shapes;
 var img;
 
-
-var scrollOff = function( e ){
-	e.preventDefault();
-}
-// スクロールをキャンセル
-document.addEventListener( 'touchmove',scrollOff, false);
-//removeEventListenerで「スクロールをキャンセル」をキャンセル
-document.removeEventListener( 'touchmove', scrollOff, false );
-1
-2
-3
-4
-5
-6
-7
-var scrollOff = function( e ){
-	e.preventDefault();
-}
-// スクロールをキャンセル
-document.addEventListener( 'touchmove',scrollOff, false);
-//removeEventListenerで「スクロールをキャンセル」をキャンセル
-document.removeEventListener( 'touchmove', scrollOff, false );
+document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false})
 
 //noSmooth(); //軽くするためのノースムース
 //var fr = 10; //軽くするためのフレームレート

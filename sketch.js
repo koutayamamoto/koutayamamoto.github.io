@@ -2,14 +2,11 @@
 
 var shapes;
 var img;
-
-document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false})
-
 //noSmooth(); //軽くするためのノースムース
 //var fr = 10; //軽くするためのフレームレート
 
 function preload() {
-  img = loadImage('data/img2.png');
+  img = loadImage('data/img3.png');
 
   shapes = [];
   shapes.push(loadImage('data/056.svg'));
@@ -46,7 +43,7 @@ function draw() {
       var greyscale = round(red(c) * 0.222 + green(c) * 0.707 + blue(c) * 0.071);
       var gradientToIndex = round(map(greyscale, 0, 255, 0, shapes.length - 1));
 
-      var w1 = map(greyscale, 0, 255, 15, 0.1);
+      var w1 = map(greyscale, 0, 255, 30, 0.1);
 
       //translate(posX / 2, posY / 2);
       imageMode(CENTER);
@@ -55,7 +52,7 @@ function draw() {
       //rotate(frameCount / 20.0); //勝手に回転
       rotate(mouseYFactor * w1)
       translate(-posX,-posY);
-      image(shapes[gradientToIndex], posX, posY, (w1 * mouseXFactor * 2), (w1 * mouseXFactor * 2));
+      image(shapes[gradientToIndex], posX+(w1 * mouseYFactor * 5), posY+(w1 * mouseYFactor * 5), (w1 * mouseXFactor * 2), (w1 * mouseXFactor * 2));
       pop()
     }
   }

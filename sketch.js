@@ -1,9 +1,12 @@
 'use strict';
 
-//touchmove の縦スクロールを禁止
-document.body.addEventListener( 'touchmove', function(e){
-e.preventDefault();
-});
+function handleTouchMove(event) {
+    event.preventDefault();
+}
+//スクロール禁止
+document.addEventListener('touchmove', handleTouchMove, { passive: false });
+//スクロール復帰
+document.removeEventListener('touchmove', handleTouchMove, { passive: false });
 
 
 var shapes;

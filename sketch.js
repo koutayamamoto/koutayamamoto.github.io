@@ -56,7 +56,7 @@ function draw() {
       translate(-posX,-posY);
       image(shapes[gradientToIndex], posX+(w1 * mouseYFactor * 10), posY+(w1 * mouseYFactor * 10), w1, w1);
 
-      if(mouseX > 200)image(shapes[gradientToIndex], posX+(w1 * mouseYFactor * 10), posY+(w1 * mouseYFactor * 10), (w1 * mouseXFactor * 2), (w1 * mouseXFactor * 2));
+      if(mouseX > 150)image(shapes[gradientToIndex], posX+(w1 * mouseYFactor * 10), posY+(w1 * mouseYFactor * 10), (w1 * mouseXFactor * 2), (w1 * mouseXFactor * 2));
 
 
       pop()

@@ -1,10 +1,10 @@
 'use strict';
 
-function handleTouchMove(event) {
-    event.preventDefault();
-}
-//スクロール禁止
-document.addEventListener('touchmove', handleTouchMove, { passive: false });
+$(function() {
+    $('.close').on('click', function() {
+        $('.loading_box').hide();
+    });
+});
 
 
 

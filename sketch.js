@@ -5,8 +5,7 @@ function handleTouchMove(event) {
 }
 //スクロール禁止
 document.addEventListener('touchmove', handleTouchMove, { passive: false });
-//スクロール復帰
-document.removeEventListener('touchmove', handleTouchMove, { passive: false });
+
 
 
 var shapes;

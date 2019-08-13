@@ -1,5 +1,11 @@
 'use strict';
 
+//touchmove の縦スクロールを禁止
+document.body.addEventListener( 'touchmove', function(e){
+e.preventDefault();
+});
+
+
 var shapes;
 var img;
 //noSmooth(); //軽くするためのノースムース

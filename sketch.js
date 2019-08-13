@@ -1,10 +1,15 @@
 'use strict';
 
 $(function() {
+    $(window).on('touchmove.noScroll', function(e) {
+        e.preventDefault();
+    });
     $('.close').on('click', function() {
         $('.loading_box').hide();
+        $(window).off('.noScroll');
     });
 });
+
 
 
 

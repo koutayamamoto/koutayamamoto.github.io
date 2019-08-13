@@ -1,13 +1,6 @@
 'use strict';
 
-// 停止、開始でfunction書くのが面倒なので1つにまとめます。
-var movefun = function( event ){
-	event.preventDefault();
-}
- 
-// スクロール停止の処理
-window.addEventListener( 'touchmove' , movefun , { passive: false } );
-
+document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
 
 
 var shapes;

@@ -63,4 +63,7 @@ function draw() {
 
     }
   }
+  save("mySVG.svg");      // give file name
+  print ("saved svg");
+  noLoop();								// we just want to export once
 }

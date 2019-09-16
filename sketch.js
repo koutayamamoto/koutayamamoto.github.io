@@ -9,7 +9,8 @@ var img;
 //var fr = 10; //軽くするためのフレームレート
 
 function preload() {
-  img = loadImage('data/img3.png');
+  img = loadImage('data/kohh.jpg');
+  //img 2= loadImage('data/siro.jpg');
 
   shapes = [];
   shapes.push(loadImage('data/056.svg'));
@@ -24,7 +25,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(255, 50);
 
 
   var mouseXFactor = map(mouseX, 0, width, 0.05, 1);
@@ -52,11 +53,12 @@ function draw() {
       push();
       translate(posX,posY);
       //rotate(frameCount / 20.0); //勝手に回転
-      rotate(mouseYFactor * w1 * 2)
+      //translate(mouseYFactor * w1 * 2)
+      rotate(frameCount / 20.0);
       translate(-posX,-posY);
-      image(shapes[gradientToIndex], posX+(w1 * mouseYFactor * 10), posY+(w1 * mouseYFactor * 10), w1, w1);
+      image(shapes[gradientToIndex], posX+(w1 * mouseYFactor * 0), posY+(w1 * mouseYFactor * 20), w1, w1);
 
-      if(mouseX > 150)image(shapes[gradientToIndex], posX+(w1 * mouseYFactor * 10), posY+(w1 * mouseYFactor * 10), (w1 * mouseXFactor * 2), (w1 * mouseXFactor * 2));
+      if(mouseX > 200)image(shapes[gradientToIndex], posX+(w1 * mouseYFactor * 10), posY+(w1 * mouseYFactor * 10), (w1 * mouseXFactor * 1), (w1 * mouseXFactor * 2));
 
 
       pop()
